@@ -415,7 +415,7 @@
             n = cfg.hz.capStyle;
             PVI.palette.wh_fg = n ? "rgb(100, 0, 0)" : "rgb(204, 238, 255)";
             PVI.palette.wh_fg_hd = n ? "rgb(255, 0, 0)" : "rgb(120, 210, 255)";
-            PVI.CAP.style.cssText = "left:0; right:auto; display:block; cursor:default; position:absolute; width:auto; height:auto; border:0; white-space: " + (cfg.hz.capWrapByDef ? "pre-line" : "nowrap") + '; font:13px/1.4em "Trebuchet MS",sans-serif; background:rgba(' + (n ? "255,255,255,.95" : "0,0,0,.75") + ") !important; color:#" + (n ? "000" : "fff") + " !important; box-shadow: 0 0 1px #" + (n ? "666" : "ddd") + " inset; padding:0 4px; border-radius: 3px";
+            PVI.CAP.style.cssText = "left:0; right:auto; display:block; cursor:default; position:initial; max-height:125px; overflow-y:auto; width:auto; height:auto; border:0; white-space:pre-wrap; font:13px/1.4em \"Trebuchet MS\",sans-serif; background:rgba(" + (n ? "255,255,255,.95" : "0,0,0,.75") + ") !important; color:#" + (n ? "000" : "fff") + " !important; box-shadow: 0 0 1px #" + (n ? "666" : "ddd") + " inset; padding:0 4px; border-radius: 3px";
             n = cfg.hz.capPos ? "bottom" : "top";
             PVI.CAP.overhead = Math.max(-18, Math.min(0, PVI.DBOX[n[0] + "p"] - 18));
             PVI.CAP.style[n] = PVI.CAP.overhead + "px";
